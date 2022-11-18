@@ -10,27 +10,51 @@
    <body>
     <h1>Accordéon avec des booléens</h1>
 
+    <div class="accordeon">
+      <section>
+      <dl x-data="{bouton2IsOpen: false}">
+        <div id="bouton 2" x-show="bouton1IsOpen"> <button>bouton 2</button></dt>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, labore fuga? Nemo minus nisi, voluptates in doloremque nobis sequi quos optio error reiciendis atque omnis corporis exercitationem blanditiis culpa dolor.</p>
+        </div>
+      </dl>
+      </section>
+
+
+      <section>
+        <dl x-data="{bouton1IsOpen: false}">
+          <dt @click="bouton1IsOpen = ! bouton1IsOpen"><button>bouton 1</button></dt>
+          <div id="bouton 1" x-show="bouton1IsOpen" x-transition.duration.800ms>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ducimus, optio consectetur possimus mollitia placeat non ab quod, odit odio beatae ratione culpa. Ex, ut. Consequuntur officia amet cumque sed?</p>
+          </div>
+        </dl>
+    </section>
+
+  
+
+      <section>
+        <dl> </dl>
+        <button @click="open2 = ! open" >bouton 2</button>
+        <span x-show="open" x-transition.duration.600ms></span>
+        <p>Illo et autem perferendis mollitia. Tempora animi quisquam earum, illo praesentium, perferendis quasi consequatur explicabo eius laudantium at deserunt consectetur unde, ea maiores qui? Nostrum, dicta? Reiciendis numquam neque ex.</p>
+      </section>
+
+      <section>
+        <button click="open3 = ! open">bouton 3</button>
+        <span x-show="open" x-transition.duration.600ms></span>
+        <p>Eum nam voluptate iste, adipisci nihil quos. Quo magni expedita nobis labore quia quibusdam, error soluta iste tempora odio voluptatem officiis temporibus autem corporis similique veritatis illum sit ex aut.</p>
+      </section>
+    </div>
+
     <section>
       <div x-data="{ open: false }">
-        <button @click="open = ! open">Menu </button>
+        <button @click="open4 = ! open">Articles </button>
           <span x-show="open" x-transition.duration.600ms>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquid laboriosam. 
             Ullam nisi adipisci, nemo iure incidunt nulla omnis, facere magni provident, aliquam esse inventore explicabo? Voluptatem, sed. Earum, aliquam.
         </span>
       </div>
     </section>
-
-    <section>
-      <div x-data="{ open: false }">
-        <button @click="open = ! open">Articles </button>
-          <span x-show="open" x-transition.duration.600ms>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquid laboriosam. 
-            Ullam nisi adipisci, nemo iure incidunt nulla omnis, facere magni provident, aliquam esse inventore explicabo? Voluptatem, sed. Earum, aliquam.
-        </span>
-      </div>
-    </section>
-
-
+  
 
   </body>
 </html>
