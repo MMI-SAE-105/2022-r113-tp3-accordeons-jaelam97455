@@ -5,27 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
+
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
     <div class="accordeon">
 
+  <section>
+    <div x-data="{ expanded: false}"> 
+         <button @click="expanded = ! expanded"> Bouton 1 </button>
+          <p x-show= "expanded" x-collapse.duration.1000ms>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi necessitatibus praesentium
+            exercitationem sint dolore fuga quam eveniet nostrum, ipsam ea iusto omnis dolorem veritatis ratione a, rem odio. Velit?
+          </p>
+    </div>
+  </section>
+    
       <section>
-        <div> x-data="{ expanded: false }
-          <button>bouton 1</button>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi necessitatibus praesentium
-           exercitationem sint dolore fuga quam eveniet nostrum, ipsam ea iusto omnis dolorem veritatis ratione a, rem odio. Velit?</p>
-      </div>
+        <div x-data="{ expanded: false}"> 
+        <button @click="expanded = ! expanded">Bouton 2</button>
+        <p x-show= "expanded" x-collapse.min.50px>
+          Voluptatum iste sint, officiis rem dicta eveniet odio dolor provident magnam, laborum quidem, perspiciatis non harum debitis? Perspiciatis iusto, 
+          dolorem quis quaerat maiores iure quia pariatur consectetur alias porro libero?
+        </p>
       </section>
 
-
       <section>
-        <button>bouton 2</button>
-        <p>Voluptatum iste sint, officiis rem dicta eveniet odio dolor provident magnam, laborum quidem, perspiciatis non harum debitis? Perspiciatis iusto, dolorem quis quaerat maiores iure quia pariatur consectetur alias porro libero?</p>
-      </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Ad quam tempora necessitatibus dolore sint inventore eveniet excepturi natus soluta reprehenderit suscipit, praesentium dicta at, enim culpa assumenda, accusantium consectetur numquam! Possimus deleniti quasi iste. A eius delectus reiciendis!</p>
+      <div x-data="{ expanded: false}"> 
+      <button  @click="expanded = ! expanded">Bouton 3</button>
+        <p  x-show= "expanded" x-collapse.min.100px>
+          Ad quam tempora necessitatibus dolore sint inventore eveniet excepturi natus soluta reprehenderit suscipit, praesentium dicta at, 
+          enim culpa assumenda, accusantium consectetur numquam! Possimus deleniti quasi iste. A eius delectus reiciendis!
+        </p>
       </section>
     </div>
   </body>
