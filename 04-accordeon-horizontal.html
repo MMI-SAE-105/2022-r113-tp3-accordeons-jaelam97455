@@ -13,11 +13,59 @@
        ul#accordeon li {
         display: inline-block;
         background-color: #EEE;
-        width: 107px; ;
-
-
+        width: 107px; 
+       
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
        }
     
+
+      ul#accordeon li {
+       overflow: hidden;
+      height: 90px;
+      list-style-type: none;
+      margin:3px;
+      padding: 5px;
+      background-color: #EEE;
+      border-radius: 5px;
+      }
+
+     ul#accordeon li {
+       margin: 0;
+       padding:0;
+
+     }
+
+     ul#accordeon li.actif {
+        width: 317px;
+       }
+       
+       ul#accordeon li figure img, ul#accordeon li figure
+       figcaption {
+          display: table-cell;
+          vertical-align: top;
+       }
+       
+       ul#accordeon li figure figcaption {
+          width: 200 px;
+          padding-left: 10 px;
+       }
+
+       ul#accordeon li figure h3 {
+          margin: 0px;
+          height: 2em;
+       }
+
+       ul#accordeon li figure p {
+          margin-bottom: 0px;
+            
+       }
+
+
+
       </style>
 
     
