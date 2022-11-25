@@ -9,12 +9,22 @@
 </head>
   <body>
     <h1>Accordéon horizontal</h1>
+      <style>
+       ul#accordeon li {
+        display: inline-block;
+        background-color: #EEE;
+        width: 107px; ;
+
+
+       }
+    
+      </style>
 
     
     <ul id="accordeon">
       <li :class="actif">
         <figure>
-          <img src="fenêtre.jpg" alt="fenêtre" width="102">
+          <img src="fenêtre.jpg" alt="fenêtre" width="102" x-transition:enter-end="overflow : hidden" height="77">
           <figcaption>
             <h3>Lorem, ipsum dolor.</h3>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
