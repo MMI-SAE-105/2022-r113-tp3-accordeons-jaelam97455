@@ -61,16 +61,13 @@
 
        ul#accordeon li figure p {
           margin-bottom: 0px;
-            
+
        }
-
-
 
       </style>
 
-    
-    <ul id="accordeon">
-      <li :class="actif">
+  <ul id="accordeon" x-data="{isOpen:2}">
+      <li :class="{actif:isOpen === 1,}" @click="isOpen =1">
         <figure>
           <img src="fenêtre.jpg" alt="fenêtre" width="102" x-transition:enter-end="overflow : hidden" height="77">
           <figcaption>
@@ -78,8 +75,9 @@
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </figcaption>
         </figure>
-      </li>
-      <li :class="{actif:isOpen === 1,}">
+     </li>
+
+      <li :class="{actif:isOpen === 2,}" @click="isOpen =3">
         <figure>
           <img src="baal.jpg" alt="baal" width="102">
           <figcaption>
@@ -88,7 +86,7 @@
           </figcaption>
         </figure>
       </li>
-      <li :class="{actif:isOpen === 1,}">
+      <li :class="{actif:isOpen === 3,}">
         <figure>
           <img src="ordi.jpg" alt="ordi" width="102">
           <figcaption>
@@ -97,6 +95,6 @@
           </figcaption>
         </figure>
       </li>
-    </ul>
+   </ul>
   </body>
 </html>
