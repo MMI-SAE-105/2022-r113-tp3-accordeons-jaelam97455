@@ -11,25 +11,23 @@
     <h1>Accordéon avec des booléens</h1>
 
     <div class="accordeon">
-      <section>
-      <dl x-data="{bouton2IsOpen: false}">
-        <div id="bouton 2" x-show="bouton1IsOpen"> <button>bouton 2</button></dt>
+        <section>
+         <dl x-data="{bouton1IsOpen: false}">
+           <div id="bouton 1" x-show="bouton1IsOpen"> <button>bouton 1</button></dt>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, labore fuga? Nemo minus nisi, voluptates in doloremque nobis sequi quos optio error reiciendis atque omnis corporis exercitationem blanditiis culpa dolor.</p>
-        </div>
-      </dl>
-      </section>
-
-
-      <section>
-        <dl x-data="{bouton1IsOpen: false}">
-          <dt @click="bouton1IsOpen = ! bouton1IsOpen"><button>bouton 1</button></dt>
-          <div id="bouton 1" x-show="bouton1IsOpen" x-transition.duration.800ms>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ducimus, optio consectetur possimus mollitia placeat non ab quod, odit odio beatae ratione culpa. Ex, ut. Consequuntur officia amet cumque sed?</p>
           </div>
         </dl>
-    </section>
+        </section>
 
-  
+
+        <section>
+          <dl x-data="{bouton1IsOpen: false}">
+            <dt @click="bouton1IsOpen = ! bouton1IsOpen"><button>bouton 1</button></dt>
+            <div id="bouton 1" x-show="bouton1IsOpen" x-transition.duration.800ms>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ducimus, optio consectetur possimus mollitia placeat non ab quod, odit odio beatae ratione culpa. Ex, ut. Consequuntur officia amet cumque sed?</p>
+            </div>
+            </dl>
+       </section>
 
       <section>
         <dl> </dl>
@@ -44,16 +42,6 @@
         <p>Eum nam voluptate iste, adipisci nihil quos. Quo magni expedita nobis labore quia quibusdam, error soluta iste tempora odio voluptatem officiis temporibus autem corporis similique veritatis illum sit ex aut.</p>
       </section>
     </div>
-
-    <section>
-      <div x-data="{ open: false }">
-        <button @click="open4 = ! open">Articles </button>
-          <span x-show="open" x-transition.duration.600ms>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquid laboriosam. 
-            Ullam nisi adipisci, nemo iure incidunt nulla omnis, facere magni provident, aliquam esse inventore explicabo? Voluptatem, sed. Earum, aliquam.
-        </span>
-      </div>
-    </section>
   
 
   </body>
