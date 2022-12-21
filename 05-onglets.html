@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Onglets</title>
   </head>
   <body>
@@ -17,8 +18,22 @@
       display: flex;
       gap: 1em;
     }
+    #onglets li {
+      padding: 0.5em;
+      border: 2px solid rgb(0, 0, 0);
+      border-bottom: 3px solid rgba(18, 2, 73, 0.968);
+      background-color: rgb(79, 111, 237);
+      cursor: pointer;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      opacity: 100;
+      transition: 1s;
+    }
 
-  
+    #onglets li.actif {
+      background-color: rgb(176, 208, 238);
+    }
+    
     </style>
 
     <h1>Onglets</h1>
